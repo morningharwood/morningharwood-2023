@@ -8,6 +8,7 @@ export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
 
+
   return (
     <>
       <title>{head.title}</title>
@@ -15,7 +16,18 @@ export const RouterHead = component$(() => {
       <link rel="canonical" href={loc.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://res.cloudinary.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        // @ts-ignore
+        crossOrigin="true"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Space+Mono:wght@400;700&family=Trispace:wdth,wght@125,500&display=swap"
+        rel="stylesheet"
+      />
       {head.meta.map((m) => (
         <meta {...m} />
       ))}
