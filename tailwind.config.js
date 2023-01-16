@@ -8,6 +8,9 @@ module.exports = {
   //   ],
   // },
   theme: {
+    letterSpacing: {
+      tightest: '-0.25em',
+    },
     colors: {
       primary: {
         hover: 'var(--primary-400)',

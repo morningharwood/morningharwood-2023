@@ -26,9 +26,7 @@ const DateCounter = component$(({ inView = true }: PropsType) => {
   const years = range(mattAge + 1, new Date().getFullYear() - mattAge);
 
   useClientEffect$(() => {
-    console.log('helloooo')
     setInterval(() => {
-      console.log('inside', count)
       if (inView) {
         const len = years.length - 1;
         const next = count.value + 1;

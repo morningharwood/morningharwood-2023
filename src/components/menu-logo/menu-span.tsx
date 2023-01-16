@@ -8,8 +8,8 @@ const MenuLogoSpan = component$((props: PropsTypeSpan) => {
 
   const ref = useFlyInOnce(index);
   return (
-    <div className="overflow-y-hidden">
-      <span ref={ref} className="flex opacity-0">
+    <div class="overflow-y-hidden">
+      <span ref={ref} class="flex opacity-0">
         <Slot />
       </span>
     </div>
