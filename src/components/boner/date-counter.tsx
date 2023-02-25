@@ -1,7 +1,8 @@
-
-
-import {component$, useBrowserVisibleTask$, useSignal} from "@builder.io/qwik";
-
+import {
+  component$,
+  useBrowserVisibleTask$,
+  useSignal,
+} from "@builder.io/qwik";
 export const getAge = (birthDate: string) => {
   const date = new Date();
   const time = new Date(birthDate).getTime();
@@ -20,7 +21,7 @@ type PropsType = {
   inView: boolean;
 };
 const DateCounter = component$(({ inView = true }: PropsType) => {
-  const BIRTH_YEAR = '1985-09-03';
+  const BIRTH_YEAR = "1985-09-03";
   const count = useSignal(0);
   const mattAge = getAge(BIRTH_YEAR);
   const years = range(mattAge + 1, new Date().getFullYear() - mattAge);
@@ -34,7 +35,6 @@ const DateCounter = component$(({ inView = true }: PropsType) => {
       }
     }, 80);
   });
-
 
   return <span className="pl-1 pr-1">{years[count.value]} </span>;
 });

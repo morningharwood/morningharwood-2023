@@ -1,12 +1,16 @@
-import anime from 'animejs';
+import anime from "animejs";
 
 // import { DateCounter } from '../date-counter/date-counter';
-import {component$, useBrowserVisibleTask$, useSignal} from "@builder.io/qwik";
-import {DateCounter} from "./date-counter";
+import {
+  component$,
+  useBrowserVisibleTask$,
+  useSignal,
+} from "@builder.io/qwik";
+import { DateCounter } from "./date-counter";
 
 const Boner = component$(() => {
-  const ref =  useSignal<Element>();
-  const ref2 =  useSignal<Element>();
+  const ref = useSignal<Element>();
+  const ref2 = useSignal<Element>();
   const inView = useSignal(false);
 
   useBrowserVisibleTask$(() => {
@@ -17,7 +21,7 @@ const Boner = component$(() => {
 
     anime({
       targets: ref.value,
-      transformOrigin: ['0 50%', '50% 50%'],
+      transformOrigin: ["0 50%", "50% 50%"],
       scaleX: [
         { value: 0, duration: 0 },
         { value: 1, duration: 1000 },
@@ -28,11 +32,11 @@ const Boner = component$(() => {
           value: rotateZValue,
           duration: 2000,
           delay: 800,
-          easing: 'spring(1, 100, 5, 5)',
+          easing: "spring(1, 100, 5, 5)",
         },
       ],
       duration: 4000,
-      easing: 'easeInOutSine',
+      easing: "easeInOutSine",
     });
     anime({
       targets: ref2.value,
@@ -46,8 +50,8 @@ const Boner = component$(() => {
         { value: 1, duration: 1650 },
       ],
       duration: 350,
-      easing: 'easeInOutSine',
-      update(anim: { progress: number; }) {
+      easing: "easeInOutSine",
+      update(anim: { progress: number }) {
         if (anim.progress >= 100) {
           inView.value = true;
         }
@@ -69,7 +73,7 @@ const Boner = component$(() => {
           ref={ref2}
         >
           <span className="flex items-center transform translate-y-1">©</span>
-          <DateCounter inView={inView.value}/>
+          <DateCounter inView={inView.value} />
           <span className="uppercase">MorningHarwood</span>
         </p>
       </div>

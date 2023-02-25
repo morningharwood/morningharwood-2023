@@ -1,7 +1,7 @@
 type MenuItem = {
-    title: string;
-    ariaLabel: string;
-    href: string;
+  title: string;
+  ariaLabel: string;
+  href: string;
 };
 
-export type {MenuItem}
+export type { MenuItem };

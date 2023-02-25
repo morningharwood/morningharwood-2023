@@ -1,7 +1,11 @@
-import { component$, useBrowserVisibleTask$, useSignal } from '@builder.io/qwik';
-import { useFlyInOnce } from '~/hooks/use-fly-in-once';
-import { shuffle } from '~/utils/shuffle';
-import { interests } from './interests';
+import {
+  component$,
+  useBrowserVisibleTask$,
+  useSignal,
+} from "@builder.io/qwik";
+import { useFlyInOnce } from "~/hooks/use-fly-in-once";
+import { shuffle } from "~/utils/shuffle";
+import { interests } from "./interests";
 
 const RunningHeader = component$(() => {
   const animatedRef = useFlyInOnce(8);
@@ -11,7 +15,7 @@ const RunningHeader = component$(() => {
   const interestsMaxIndex = shuffledInterests.length - 1;
 
   useBrowserVisibleTask$(() => {
-    setInterval(() =>{
+    setInterval(() => {
       if (play.value) {
         const next = count.value + 1;
         count.value = next % interestsMaxIndex;
@@ -23,8 +27,8 @@ const RunningHeader = component$(() => {
     <p
       class="font-normal text-xs flex justify-start items-center opacity-0 w-full"
       ref={animatedRef}
-      onMouseEnter$={() => play.value = false}
-      onMouseLeave$={() => play.value = true}
+      onMouseEnter$={() => (play.value = false)}
+      onMouseLeave$={() => (play.value = true)}
     >
       <span class="text-xs pr-2 font-sans">Contact me about</span>
       <a

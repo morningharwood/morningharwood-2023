@@ -1,5 +1,5 @@
-import {component$, Slot} from '@builder.io/qwik';
-import {useFlyInOnce} from "../../hooks/use-fly-in-once";
+import { component$, Slot } from "@builder.io/qwik";
+import { useFlyInOnce } from "../../hooks/use-fly-in-once";
 type PropsTypeSpan = {
   index: number;
 };
