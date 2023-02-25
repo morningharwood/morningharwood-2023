@@ -5,7 +5,6 @@ import type { MenuItem } from "./types";
 
 const MenuNavigationItem = component$((props : MenuItem) => {
     const { href, ariaLabel, index } = props;
-  
     const animeRef = useFlyInOnce(index);
     if (isNil(href)) {
       return null;

@@ -11,7 +11,12 @@ import { RunningHeader } from '~/components/running-header/running-header';
 
 
 export default component$(() => {
-  const MenuItems = {menuItems: [{title: 'Work', slug: {current: 'Work', href: '/work/', ariaLabel: 'work'}}, {title: 'Labs', slug: {current: 'Labs', href: '/labs/', ariaLabel: 'labs'}}, {title: 'Portfolio', slug: {current: 'Portfolio', href: '/portfolio/', ariaLabel: 'portfolio'}}]}
+  const MenuItems = {
+    menuItems: [
+      {title: 'Work', slug: {current: 'work', href: '/work/', ariaLabel: 'work'}},
+      {title: 'Labs', slug: {current: 'labs', href: '/labs/', ariaLabel: 'labs'}},
+      {title: 'Portfolio', slug: {current: 'portfolio', href: '/portfolio/', ariaLabel: 'portfolio'}}
+  ]};
   return (
     <main class="md:grid md:grid-rows-2 md:grid-cols-2 h-screen relative z-10 bg-secondary-default">
       <MenuLogo />
