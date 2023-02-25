@@ -1,11 +1,11 @@
 
 // import { useMount } from '../use-mount/use-mount';
-import {useClientEffect$, useRef} from "@builder.io/qwik";
+import {useBrowserVisibleTask$, useRef} from "@builder.io/qwik";
 import {isNil} from "../utils/is-nil";
 
 const useFlyInOnce = (delay: number, startPos = [0, '175%', 0]) => {
   const ref = useRef(undefined);
-  useClientEffect$(() => {
+  useBrowserVisibleTask$(() => {
     if (typeof document === 'undefined' || isNil(ref?.current)) return;
     const keyframe = [
       { transform: `translate3D(${startPos.join(',')})`, opacity: 0 },

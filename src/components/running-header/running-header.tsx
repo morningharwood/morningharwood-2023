@@ -1,4 +1,4 @@
-import { component$, useClientEffect$, useSignal } from '@builder.io/qwik';
+import { component$, useBrowserVisibleTask$, useSignal } from '@builder.io/qwik';
 import { useFlyInOnce } from '~/hooks/use-fly-in-once';
 import { shuffle } from '~/utils/shuffle';
 import { interests } from './interests';
@@ -10,7 +10,7 @@ const RunningHeader = component$(() => {
   const shuffledInterests = shuffle(interests);
   const interestsMaxIndex = shuffledInterests.length - 1;
 
-  useClientEffect$(() => {
+  useBrowserVisibleTask$(() => {
     setInterval(() =>{
       if (play.value) {
         const next = count.value + 1;

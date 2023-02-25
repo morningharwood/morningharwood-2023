@@ -1,4 +1,4 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { useFlyInOnce } from "~/hooks/use-fly-in-once";
 import { isNil } from "~/utils/is-nil";
 import type { MenuItem } from "./types";

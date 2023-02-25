@@ -1,6 +1,6 @@
 
 
-import {component$, useClientEffect$, useSignal} from "@builder.io/qwik";
+import {component$, useBrowserVisibleTask$, useSignal} from "@builder.io/qwik";
 
 export const getAge = (birthDate: string) => {
   const date = new Date();
@@ -25,7 +25,7 @@ const DateCounter = component$(({ inView = true }: PropsType) => {
   const mattAge = getAge(BIRTH_YEAR);
   const years = range(mattAge + 1, new Date().getFullYear() - mattAge);
 
-  useClientEffect$(() => {
+  useBrowserVisibleTask$(() => {
     setInterval(() => {
       if (inView) {
         const len = years.length - 1;

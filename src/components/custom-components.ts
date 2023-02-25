@@ -1,5 +1,5 @@
 import {Typography} from './typography'
-import { RegisteredComponent } from '@builder.io/sdk-qwik';
+import type { RegisteredComponent } from '@builder.io/sdk-qwik';
 
 export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
     {

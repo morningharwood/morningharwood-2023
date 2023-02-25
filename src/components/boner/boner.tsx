@@ -1,7 +1,7 @@
 import anime from 'animejs';
 
 // import { DateCounter } from '../date-counter/date-counter';
-import {component$, useClientEffect$, useSignal} from "@builder.io/qwik";
+import {component$, useBrowserVisibleTask$, useSignal} from "@builder.io/qwik";
 import {DateCounter} from "./date-counter";
 
 const Boner = component$(() => {
@@ -9,7 +9,7 @@ const Boner = component$(() => {
   const ref2 =  useSignal<Element>();
   const inView = useSignal(false);
 
-  useClientEffect$(() => {
+  useBrowserVisibleTask$(() => {
     const isNotPortrait = window?.innerWidth / window?.innerHeight >= 1;
     const rotateZValue = isNotPortrait
       ? -((Math.atan(window?.innerHeight / window?.innerWidth) * 180) / Math.PI)
