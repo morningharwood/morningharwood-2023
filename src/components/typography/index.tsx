@@ -1,20 +1,20 @@
 import { component$ } from "@builder.io/qwik";
 import { TypographyPresets } from "./presets";
 import type { TypographKeys } from "./presets";
+import { classnames } from "~/utils/classnames";
 
 type Typography = {
   text: string;
   preset: TypographKeys;
-  class: string;
   variant: string;
+  overrides?: string;
 };
 
 export const Typography = component$((props: Typography) => {
-  const fields =
-    props.preset === "custom"
-      ? { variant: props.variant, class: props.class }
-      : TypographyPresets[props.preset];
-  // const Tag = fields?.variant;
-  console.log(fields);
-  return <h1 class={fields?.class}>{props.text}</h1>;
+  const fields = TypographyPresets[props.preset];
+
+  const Tag = fields?.variant as any;
+  return (
+    <Tag class={classnames(fields?.class, props.overrides)}>{props.text}</Tag>
+  );
 });

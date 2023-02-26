@@ -6,8 +6,7 @@ export type TypographKeys =
   | "heading4"
   | "mono"
   | "paragraph"
-  | "eyebrow"
-  | "custom";
+  | "eyebrow";
 type TypographyPreset = {
   [k in TypographKeys]: {
     variant: string;
@@ -16,10 +15,6 @@ type TypographyPreset = {
 };
 
 const TypographyPresets: TypographyPreset = {
-  custom: {
-    variant: "",
-    class: "",
-  },
   heading1: {
     variant: "h1",
     class:
