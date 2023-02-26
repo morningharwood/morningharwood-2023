@@ -136,6 +136,19 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        xxs: ".625em"
+      },
+      maxWidth: {
+        '1/3': '33.3333vw',
+        '1/2': '50vw',
+        '1/4': '25vw',
+      },
+      maxHeight: {
+        '1/3': '33.3333vh',
+        '1/2': '50vh',
+        '1/4': '25vh',
+      },
       fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',

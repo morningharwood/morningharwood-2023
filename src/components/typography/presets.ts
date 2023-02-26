@@ -6,7 +6,8 @@ export type TypographKeys =
   | "heading4"
   | "mono"
   | "paragraph"
-  | "eyebrow";
+  | "eyebrow"
+  | "xsEyebrow";
 type TypographyPreset = {
   [k in TypographKeys]: {
     variant: string;
@@ -47,6 +48,11 @@ const TypographyPresets: TypographyPreset = {
     variant: "span",
     class:
       "text-primary-default text-xs text-left font-sans font-bold uppercase",
+  },
+  xsEyebrow: {
+    variant: "h4",
+    class:
+      "text-primary-default text-xxs text-left font-sans font-bold uppercase",
   },
 };
 
