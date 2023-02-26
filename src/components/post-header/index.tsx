@@ -4,8 +4,8 @@ import { Typography } from "~/components/typography";
 import type { PostHeaderT } from "~/components/post-header/types";
 
 const PostHeader = component$((props: PostHeaderT) => {
-  const { background, eyebrowText, headingText, paragraphText } = props;
-
+  const { background, eyebrowText, headingText, paragraphText, categories } = props;
+  console.log(props);
   return (
     <Container
       background={background}
@@ -25,18 +25,18 @@ const PostHeader = component$((props: PostHeaderT) => {
       </div>
       <div className="flex mt-5 pt-5">
         <div className="inline-flex flex-col flex-wrap sm:max-h-1/3 lg:max-h-1/4">
-          <div className="mb-5 pr-10">
-            <Typography variant={"h4"} preset="xsEyebrow" text="Eyebrow" />
-            <Typography variant={"p"} preset="eyebrow" text="tester" />
-            <Typography variant={"p"} preset="eyebrow" text="tester" />
-            <Typography variant={"p"} preset="eyebrow" text="tester" />
-          </div>
-          <div className="mb-5 pr-10">
-            <Typography variant={"h4"} preset="xsEyebrow" text="hellow" />
-            <Typography variant={"p"} preset="eyebrow" text="tester" />
-            <Typography variant={"p"} preset="eyebrow" text="tester" />
-            <Typography variant={"p"} preset="eyebrow" text="tester" />
-          </div>
+          {categories?.map((category) => {
+            return (
+              <div className="mb-5 pr-10">
+                <Typography variant={"h4"} preset="xsEyebrow" text={category.text} />
+                {category?.items?.map((item) => {
+                  return (
+                    <Typography variant={"p"} preset="LabelSmall" text={item?.text} />
+                  );
+                })}
+              </div>
+            )
+          })}
         </div>
       </div>
     </Container>

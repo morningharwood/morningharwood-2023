@@ -1,4 +1,5 @@
 import { component$, Resource, useResource$ } from "@builder.io/qwik";
+import type { DocumentHead} from "@builder.io/qwik-city";
 import { useLocation } from "@builder.io/qwik-city";
 import { getContent, RenderContent, getBuilderSearchParams } from "@builder.io/sdk-qwik";
 import {CUSTOM_COMPONENTS} from '../../../components/custom-components';
@@ -34,3 +35,13 @@ export default component$(() => {
     />
   );
 });
+
+export const head: DocumentHead = () => {
+  return {
+    title: "MorningHarwood - Works",
+    meta: [{
+      name: "Morningharwood - Works",
+      content: "A list of all my project work over my career",
+    },
+  ]}
+};

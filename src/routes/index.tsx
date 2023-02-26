@@ -19,7 +19,6 @@ export const useMenuItems = loader$(async () => {
 
 export default component$(() => {
   const data = useMenuItems();
-
   return (
     <main class="md:grid md:grid-rows-2 md:grid-cols-2 h-screen relative z-10 bg-secondary-default">
       <MenuLogo />
@@ -45,11 +44,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Good Morning Harwood",
+  title: "MorningHarwood - Works",
   meta: [
     {
-      name: "Morningharwood",
-      content: "A digital portfolio for Matthew Harwood",
+      name: "Morningharwood - Works",
+      content: "A list of all my project work over my career",
     },
   ],
 };

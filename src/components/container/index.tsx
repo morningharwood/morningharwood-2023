@@ -10,8 +10,8 @@ type ContainerT = {
 const Container = component$((props: ContainerT) => {
   const { background, overrides } = props;
   const ColorMap = {
-    primary: "bg-primary-default dark:bg-white  ",
-    secondary: "bg-secondary-default dark:bg-primary-default",
+    primary: "bg-primary-default",
+    secondary: "bg-secondary-default",
     tertiary: "bg-tertiary-default",
   } as any;
   return (

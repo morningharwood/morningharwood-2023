@@ -5,4 +5,8 @@ export type PostHeaderT = {
   eyebrowText: string;
   headingText: string;
   paragraphText: string;
+  categories: {
+    text: string,
+    items: {text: string}[]
+  }[]
 };

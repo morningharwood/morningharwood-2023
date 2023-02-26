@@ -1,4 +1,5 @@
-// import type { TypographyFieldsType } from './types';
+// https://baseweb.design/components/typography/
+// TODO ^^ Make all these styles
 export type TypographKeys =
   | "heading1"
   | "heading2"
@@ -7,6 +8,7 @@ export type TypographKeys =
   | "mono"
   | "paragraph"
   | "eyebrow"
+  | "LabelSmall"
   | "xsEyebrow";
 type TypographyPreset = {
   [k in TypographKeys]: {
@@ -48,6 +50,10 @@ const TypographyPresets: TypographyPreset = {
     variant: "span",
     class:
       "text-primary-default text-xs text-left font-sans font-bold uppercase",
+  },
+  LabelSmall: {
+    variant: "p",
+    class: "text-primary-default text-xs text-left font-sans font-bold",
   },
   xsEyebrow: {
     variant: "h4",
