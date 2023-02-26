@@ -1,21 +1,7 @@
 // https://baseweb.design/components/typography/
 // TODO ^^ Make all these styles
-export type TypographKeys =
-  | "heading1"
-  | "heading2"
-  | "heading3"
-  | "heading4"
-  | "mono"
-  | "paragraph"
-  | "eyebrow"
-  | "LabelSmall"
-  | "xsEyebrow";
-type TypographyPreset = {
-  [k in TypographKeys]: {
-    variant: string;
-    class: string;
-  };
-};
+
+import type { TypographyPreset } from "~/components/typography/types";
 
 const TypographyPresets: TypographyPreset = {
   heading1: {
@@ -26,7 +12,7 @@ const TypographyPresets: TypographyPreset = {
   heading2: {
     variant: "h2",
     class:
-      "text-primary-default text-2xl text-left font-display tracking-tightest sm:text-3xl lg:text-4xl",
+      "text-primary-default text-2xl text-left font-display sm:text-3xl lg:text-4xl leading-none",
   },
   heading3: {
     variant: "h3",

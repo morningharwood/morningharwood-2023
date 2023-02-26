@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { TypographyPresets } from "./presets";
-import type { TypographKeys } from "./presets";
+import type { TypographKeys } from "./types";
 import { classnames } from "~/utils/classnames";
 
 type Typography = {

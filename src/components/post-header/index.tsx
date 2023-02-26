@@ -9,10 +9,10 @@ const PostHeader = component$((props: PostHeaderT) => {
   return (
     <Container
       background={background}
-      overrides="py-16 px-8 lg:pt-20 pb-30 lg:px-5"
+      overrides="py-16 px-5 lg:pt-20 pb-30 lg:px-5"
     >
-      <div className="flex flex-col">
-        <div className="border-b border-tertiary-focus pb-12">
+      <div class="flex flex-col">
+        <div class="border-b border-tertiary-focus pb-12">
           <Typography preset="eyebrow" text={eyebrowText} variant={"h2"} />
           <Typography
             preset="heading1"
@@ -23,11 +23,11 @@ const PostHeader = component$((props: PostHeaderT) => {
           <Typography preset="paragraph" text={paragraphText} variant={"p"} />
         </div>
       </div>
-      <div className="flex mt-5 pt-5">
-        <div className="inline-flex flex-col flex-wrap sm:max-h-1/3 lg:max-h-1/4">
+      <div class="flex mt-5 pt-5">
+        <div class="inline-flex flex-col flex-wrap sm:max-h-1/3 lg:max-h-1/4">
           {categories?.map((category) => {
             return (
-              <div className="mb-5 pr-10">
+              <div class="mb-5 pr-10" key={category?.text}>
                 <Typography
                   variant={"h4"}
                   preset="xsEyebrow"
@@ -36,6 +36,7 @@ const PostHeader = component$((props: PostHeaderT) => {
                 {category?.items?.map((item) => {
                   return (
                     <Typography
+                      key={item?.text}
                       variant={"p"}
                       preset="LabelSmall"
                       text={item?.text}

@@ -5,6 +5,8 @@ import { PostHeaderSchema } from "~/components/post-header/schema";
 import { TypographySchema } from "~/components/typography/schema";
 import { Toggle } from "~/components/toggle";
 import { ToggleSchema } from "~/components/toggle/schema";
+import { Summary } from "~/components/summary";
+import { SummarySchema } from "~/components/summary/schema";
 
 export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
   {
@@ -21,5 +23,10 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
     component: Typography,
     name: "Typography",
     inputs: [...TypographySchema],
+  },
+  {
+    component: Summary,
+    name: "Summary",
+    inputs: [...SummarySchema],
   },
 ];
