@@ -2,7 +2,7 @@ const ContainerSchema = [
   {
     name: "background",
     type: "string",
-    enum: ["bg-primary-default", "bg-secondary-default", "bg-tertiary-default"],
+    enum: ["primary", "secondary", "tertiary"],
   },
 ];
 

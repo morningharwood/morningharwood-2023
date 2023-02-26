@@ -9,8 +9,13 @@ type ContainerT = {
 
 const Container = component$((props: ContainerT) => {
   const { background, overrides } = props;
+  const ColorMap = {
+    primary: "bg-primary-default dark:bg-white  ",
+    secondary: "bg-secondary-default dark:bg-primary-default",
+    tertiary: "bg-tertiary-default",
+  } as any;
   return (
-    <div class={classnames(background, overrides)}>
+    <div class={classnames(ColorMap[background], overrides)}>
       <div class="container mx-auto">
         <div class="transition duration-500 ease-in-out w-full h-full opacity-100">
           <Slot />
