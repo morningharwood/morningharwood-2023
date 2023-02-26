@@ -20,7 +20,7 @@ const MenuNavigationItem = component$((props: MenuItem & Index) => {
         <div>
           <span
             ref={animeRef}
-            class="block text-3xl md:text-6xl text-right leading-none mr-8 md:mr-16 capitalize font-bold opacity-0 font-display tracking-tightest hover:bg-accentA-hover"
+            class="block text-3xl md:text-6xl text-right leading-none mr-8 md:mr-16 font-bold opacity-0 font-display uppercase hover:bg-accentA-hover"
           >
             {title}
           </span>

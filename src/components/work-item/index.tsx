@@ -13,10 +13,10 @@ const WorkItem = component$((props: WorkItemT) => {
           className="inset-0 absolute h-full w-full object-fill p-12 md:p-48 justify-center items-center self-center opacity-10 mix-blend-multiply"
         />
         <div className="flex flex-col items-center justify-center px-4 md:px-10 md:px-16 w-full md:w-10/12 lg:w-8/12 relative ">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl tracking-tightest text-on-primary-default font-medium font-display">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl text-on-primary-default font-medium font-display uppercase">
             {title}
           </h2>
-          <p className="font-normal md:font-normal text-md md:text-md mt-3 mb-10 text-on-primary-default font-body xl:w-6/12">
+          <p className="font-normal text-md mt-3 mb-10 text-on-primary-default font-body xl:w-6/12">
             {description}
           </p>
           <a

@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     letterSpacing: {
       tightest: '-0.25em',
+      'widest': '.1em',
     },
     colors: {
       primary: {

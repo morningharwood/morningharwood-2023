@@ -21,7 +21,7 @@ const TypographyPresets: TypographyPreset = {
   heading1: {
     variant: "h1",
     class:
-      "text-primary-default text-2xl lg:text-5xl text-left font-display tracking-tightest ",
+      "text-primary-default text-2xl lg:text-5xl text-left font-display uppercase leading-none",
   },
   heading2: {
     variant: "h2",
@@ -58,7 +58,7 @@ const TypographyPresets: TypographyPreset = {
   xsEyebrow: {
     variant: "h4",
     class:
-      "text-primary-default text-xxs text-left font-sans font-bold uppercase",
+      "text-primary-default text-xxs text-left font-sans font-bold uppercase opacity-50",
   },
 };
 

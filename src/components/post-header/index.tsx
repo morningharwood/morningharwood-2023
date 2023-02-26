@@ -4,8 +4,8 @@ import { Typography } from "~/components/typography";
 import type { PostHeaderT } from "~/components/post-header/types";
 
 const PostHeader = component$((props: PostHeaderT) => {
-  const { background, eyebrowText, headingText, paragraphText, categories } = props;
-  console.log(props);
+  const { background, eyebrowText, headingText, paragraphText, categories } =
+    props;
   return (
     <Container
       background={background}
@@ -18,7 +18,7 @@ const PostHeader = component$((props: PostHeaderT) => {
             preset="heading1"
             text={headingText}
             variant={"h1"}
-            overrides="my-2 lg:my-5 -ml-1 lg:-ml-2"
+            overrides="my-1 lg:my-2 lg:-ml-1 line-height-0"
           />
           <Typography preset="paragraph" text={paragraphText} variant={"p"} />
         </div>
@@ -28,14 +28,22 @@ const PostHeader = component$((props: PostHeaderT) => {
           {categories?.map((category) => {
             return (
               <div className="mb-5 pr-10">
-                <Typography variant={"h4"} preset="xsEyebrow" text={category.text} />
+                <Typography
+                  variant={"h4"}
+                  preset="xsEyebrow"
+                  text={category.text}
+                />
                 {category?.items?.map((item) => {
                   return (
-                    <Typography variant={"p"} preset="LabelSmall" text={item?.text} />
+                    <Typography
+                      variant={"p"}
+                      preset="LabelSmall"
+                      text={item?.text}
+                    />
                   );
                 })}
               </div>
-            )
+            );
           })}
         </div>
       </div>
